@@ -8,11 +8,11 @@
 		<version>3.4.5-SNAPSHOT</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.example.manager_people</groupId>
-	<artifactId>manager-people</artifactId>
+	<groupId>com.example.smart_supply_chain</groupId>
+	<artifactId>smart-supply-chain</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>manager-people</name>
-	<description>Demo project for Spring Boot</description>
+	<name>smart-supply-chain</name>
+	<description>Hệ thống quản lý chuỗi cung ứng thông minh</description>
 	<url/>
 	<licenses>
 		<license/>
