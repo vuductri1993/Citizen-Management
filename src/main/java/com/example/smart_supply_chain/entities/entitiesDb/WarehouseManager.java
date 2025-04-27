@@ -4,6 +4,9 @@ import jakarta.persistence.*;
 import lombok.Data;
 import java.time.LocalDateTime;
 
+import com.example.smart_supply_chain.enums.Role;
+import com.example.smart_supply_chain.enums.Status;
+
 @Data
 @Entity
 @Table(name = "warehouse_managers")
@@ -53,13 +56,5 @@ public class WarehouseManager {
     @PreUpdate
     protected void onUpdate() {
         updatedAt = LocalDateTime.now();
-    }
-
-    public enum Role {
-        ADMIN, MANAGER, STAFF
-    }
-
-    public enum Status {
-        ACTIVE, INACTIVE
     }
 }

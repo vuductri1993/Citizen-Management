@@ -34,6 +34,7 @@
         <commons-collections4.version>4.4</commons-collections4.version>
         <aws-sdk.version>2.20.109</aws-sdk.version>
         <spring-cloud-aws.version>3.0.0</spring-cloud-aws.version>
+        <spring-cloud.version>2023.0.0</spring-cloud.version>
     </properties>
 	<dependencies>
 
@@ -151,6 +152,16 @@
             <artifactId>spring-security-test</artifactId>
             <scope>test</scope>
         </dependency>
+
+        <!-- Spring Cloud Gateway -->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-gateway</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
+        </dependency>
 	</dependencies>
 
 	<build>
@@ -181,5 +192,17 @@
 			</releases>
 		</pluginRepository>
 	</pluginRepositories>
+
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>org.springframework.cloud</groupId>
+				<artifactId>spring-cloud-dependencies</artifactId>
+				<version>${spring-cloud.version}</version>
+				<type>pom</type>
+				<scope>import</scope>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
 
 </project>
